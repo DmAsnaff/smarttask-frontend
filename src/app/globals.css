@@ -44,6 +44,18 @@ body {
   box-shadow: 0 0 0 2px #0f6842aa;
 }
 
+/* Select dropdown options styling */
+.glass-input option {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.glass-input option:checked {
+  background: linear-gradient(#0f6842, #0f6842);
+  background-color: #0f6842;
+  color: white;
+}
+
 /* Buttons */
 .btn-primary {
   background: rgba(15, 104, 66, 0.85);
