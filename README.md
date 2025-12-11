@@ -29,7 +29,7 @@ This project helped me understand real world full stack engineering, API design,
 - **Azure Static Web Apps** - Frontend Hosting (Next.js/React)
 
 ---
-
+![Tech Poster](https://github.com/DmAsnaff/smarttask-frontend/raw/main/poster.png)
 # Overview
 
 **SmartTasks** is a modern full stack productivity app that helps users manage tasks.  
@@ -89,5 +89,6 @@ dotnet run
 # Thank You!
 
 If you found this project interesting or helpful, feel free to star rate the repository and connect with me!
+
 
 
