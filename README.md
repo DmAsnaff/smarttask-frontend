@@ -1,11 +1,12 @@
 
 # SmartTasks — AI-Powered Task Manager
 
-Hi everyone!  
+Hi guys, 
 I'm **Mohamed Asnaff**, a 4th-year **BSc (Hons) in Information Technology** student at **Rajarata University of Sri Lanka**.
 
-I built **SmartTasks** to get hands-on experience with **.NET**, **React/Next.js**, and **Azure cloud deployment**.  
-This project helped me understand real-world full-stack engineering, API design, authentication, and cloud hosting.
+I built this just to get hands on experience with 
+**.NET**, **React/Next.js**, and **Azure cloud deployment**.  
+This project helped me understand real world full stack engineering, API design, authentication, and cloud hosting.
 
 ---
 
@@ -88,3 +89,4 @@ dotnet run
 # Thank You!
 
 If you found this project interesting or helpful, feel free to star rate the repository and connect with me!
+
