@@ -1,3 +1,5 @@
+"use client";
+
 import { getTasks } from "@/lib/api";
 import TaskCard from "@/components/TaskCard";
 import Link from "next/link";
