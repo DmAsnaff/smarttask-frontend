@@ -104,14 +104,13 @@ export default function TasksPage() {
       ) : (
         <div className="grid gap-3 md:grid-cols-2">
           {tasks.map((task) => (
-            <TaskCard key={task.id} task={task} />
+            <TaskCard
+  key={task.id}
+  task={task}
+  onToggle={() => handleToggle(task)}
+  onDelete={() => handleDelete(task.id)}
+/>
 
-            // <TaskCard
-            //   key={task.id}
-            //   task={task}
-            //   onToggle={() => handleToggle(task)}
-            //   onDelete={() => handleDelete(task.id)}
-            // />
           ))}
         </div>
       )}

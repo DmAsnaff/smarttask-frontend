@@ -87,37 +87,20 @@
 // }
 "use client";
 
-import { TaskItem, toggleTaskCompletion, deleteTask } from "@/lib/api";
-import { useTransition } from "react";
-import { useRouter } from "next/navigation";
+import { TaskItem } from "@/lib/api";
 
 type TaskCardProps = {
   task: TaskItem;
+  onToggle: () => void;
+  onDelete: () => void;
 };
 
-export default function TaskCard({ task }: TaskCardProps) {
-  const [isPending, startTransition] = useTransition();
-  const router = useRouter();
-
-  function handleToggle() {
-    startTransition(async () => {
-      await toggleTaskCompletion(task);
-      router.refresh();
-    });
-  }
-
-  function handleDelete() {
-    if (!confirm("Delete this task?")) return;
-    startTransition(async () => {
-      await deleteTask(task.id);
-      router.refresh();
-    });
-  }
+export default function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
 
   const priorityColors: Record<string, string> = {
     High: "bg-red-500/20 text-red-200 border-red-500/40",
     Medium: "bg-amber-500/20 text-amber-200 border-amber-500/40",
-    Low: "bg-emerald-500/20 text-emerald-200 border-emerald-500/40",
+    Low: "bg-emerald-500/20 text-emerald-200 border-amber-500/40",
   };
 
   return (
@@ -132,16 +115,13 @@ export default function TaskCard({ task }: TaskCardProps) {
               </span>
             )}
           </h3>
-
           {task.description && (
             <p className="text-xs text-gray-300 mt-1">{task.description}</p>
           )}
         </div>
 
         <span
-          className={`text-[10px] px-2 py-1 rounded-full border ${
-            priorityColors[task.priority] ?? "bg-forest-500/20 text-forest-100"
-          }`}
+          className={`text-[10px] px-2 py-1 rounded-full border ${priorityColors[task.priority]}`}
         >
           {task.priority} priority
         </span>
@@ -158,17 +138,12 @@ export default function TaskCard({ task }: TaskCardProps) {
         </span>
 
         <div className="flex gap-2">
-          <button
-            onClick={handleToggle}
-            disabled={isPending}
-            className="btn-ghost px-2 py-1 text-[11px]"
-          >
+          <button onClick={onToggle} className="btn-ghost px-2 py-1 text-[11px]">
             {task.isCompleted ? "Mark as pending" : "Mark as done"}
           </button>
 
           <button
-            onClick={handleDelete}
-            disabled={isPending}
+            onClick={onDelete}
             className="btn-ghost px-2 py-1 text-[11px] text-red-300 border-red-500/40"
           >
             Delete
@@ -178,4 +153,3 @@ export default function TaskCard({ task }: TaskCardProps) {
     </div>
   );
 }
-
