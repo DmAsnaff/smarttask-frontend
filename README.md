@@ -29,7 +29,16 @@ This project helped me understand real world full stack engineering, API design,
 - **Azure Static Web Apps** - Frontend Hosting (Next.js/React)
 
 ---
-![My stack here](https://github.com/DmAsnaff/smarttask-frontend/raw/main/public/stack mine.png)
+![My stack here](https://github.com/DmAsnaff/smarttask-frontend/raw/main/public/stackmine.png)
+
+
+
+#  Live Demo
+
+**Its Live Now**
+https://polite-pond-06e6b0f1e.3.azurestaticapps.net
+---
+
 # Overview
 
 **SmartTasks** is a modern full stack productivity app that helps users manage tasks.  
@@ -62,12 +71,6 @@ v
 SQL Server Database (via EF Core)
 
 ````
-
-#  Live Demo
-
-**Its Live Now**
-https://polite-pond-06e6b0f1e.3.azurestaticapps.net
----
 
 #  Project Setup
 
