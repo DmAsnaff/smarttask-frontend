@@ -126,6 +126,7 @@ export async function deleteTask(id: number) {
 export async function getAISuggestions(input: string) {
   const res = await fetch(`${API_BASE}/ai/suggest-task`, {
     method: "POST",
+    mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },
