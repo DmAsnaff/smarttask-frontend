@@ -5,7 +5,15 @@ import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 
 
-export default function TaskCard({ task }: { task: TaskItem }){
+// export default function TaskCard({ task }: { task: TaskItem }){
+type TaskCardProps = {
+  task: TaskItem;
+  onToggle: () => void;
+  onDelete: () => void;
+};
+
+export default function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
+
   const [isPending, startTransition] = useTransition();
     const router = useRouter();
 
