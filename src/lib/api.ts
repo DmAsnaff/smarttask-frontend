@@ -112,34 +112,34 @@ export async function deleteTask(id: number) {
   if (!res.ok) throw new Error(await res.text());
 }
 
-// // AI Suggestion
-// export async function getAISuggestions(input: string) {
-//   const res = await fetch(`${API_BASE}/ai/suggest-task`, {
-//     method: "POST",
-//     headers: authHeaders(),
-//     body: JSON.stringify({ id: 0, input }),
-//   });
-//   if (!res.ok) throw new Error(await res.text());
-//   return res.json() as Promise<{ suggestion: string }>;
-// }
-
+// AI Suggestion
 export async function getAISuggestions(input: string) {
   const res = await fetch(`${API_BASE}/ai/suggest-task`, {
     method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      id: 0,
-      input,
-    }),
+    headers: authHeaders(),
+    body: JSON.stringify({ id: 0, input }),
   });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`AI request failed: ${text}`);
-  }
-
+  if (!res.ok) throw new Error(await res.text());
   return res.json() as Promise<{ suggestion: string }>;
 }
+
+// export async function getAISuggestions(input: string) {
+//   const res = await fetch(`${API_BASE}/ai/suggest-task`, {
+//     method: "POST",
+//     mode: "cors",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       id: 0,
+//       input,
+//     }),
+//   });
+
+//   if (!res.ok) {
+//     const text = await res.text();
+//     throw new Error(`AI request failed: ${text}`);
+//   }
+
+//   return res.json() as Promise<{ suggestion: string }>;
+// }
