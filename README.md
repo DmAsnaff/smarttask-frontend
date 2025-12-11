@@ -25,8 +25,8 @@ This project helped me understand real world full stack engineering, API design,
 - **JWT Authentication**
 
 ### **Cloud Deployment**
-- **Azure App Service** — Backend Hosting (.NET API)
-- **Azure Static Web Apps** — Frontend Hosting (Next.js/React)
+- **Azure App Service** - Backend Hosting (.NET API)
+- **Azure Static Web Apps** - Frontend Hosting (Next.js/React)
 
 ---
 
@@ -89,4 +89,5 @@ dotnet run
 # Thank You!
 
 If you found this project interesting or helpful, feel free to star rate the repository and connect with me!
+
 
