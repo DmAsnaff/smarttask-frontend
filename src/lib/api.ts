@@ -1,4 +1,4 @@
-const API_BASE = "https://asnaffwebapp-gtbtg0c8ayfbbefz.southeastasia-01.azurewebsites.net/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL!;
 
 // function getToken() {
 //   if (typeof window === "undefined") return null;
