@@ -35,7 +35,7 @@ export default function RegisterPage() {
       <div className="glass-panel p-6">
         <h1 className="text-lg font-semibold mb-1">Create your account</h1>
         <p className="text-xs text-gray-300 mb-4">
-          Start tracking tasks with a calm, forest-green workspace.
+          Start tracking tasks with a AI intergrated workspace.
         </p>
 
         {error && (
