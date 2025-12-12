@@ -81,7 +81,7 @@ export default function TasksPage() {
   }
 
   if (loading) return <p className="text-white">Loading tasks...</p>;
-  if (error) return <p className="text-red-400">{error}</p>;
+  if (error) return <p className="text-red-400">throw new Error(error); </p>;
 
   return (
     <div className="space-y-4">

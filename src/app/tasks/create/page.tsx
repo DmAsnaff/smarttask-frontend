@@ -3,6 +3,8 @@
 import { createTask } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useEffect } from "react";
+
 
 export default function CreateTaskPage() {
   const router = useRouter();
@@ -12,6 +14,13 @@ export default function CreateTaskPage() {
   const [description, setDescription] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) router.push("/auth/login");
+  }, []);
+
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
