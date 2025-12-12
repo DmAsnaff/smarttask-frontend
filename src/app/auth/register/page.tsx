@@ -15,6 +15,18 @@ export default function RegisterPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
+    if (!username.trim()) {
+      setError("Username is required.");
+      return;
+    }
+    if (!password.trim()) {
+      setError("Password is required. Please type a password.");
+      return;
+    }
+    if (!confirm.trim()) {
+      setError("Please confirm your password.");
+      return;
+    }
     if (password !== confirm) {
       setError("Passwords do not match.");
       return;
